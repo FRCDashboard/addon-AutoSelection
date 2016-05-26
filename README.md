@@ -1,5 +1,5 @@
 # Autonomous Selection addon for FRC Dashboard
-Live updating, minimal gyro widget. Supports resetting to zero on click for calibration.
+Simple select box for choosing which autonomous to run.
 
 ## Installation
 1. Copy the contents of `autoselection.html` to wherever in the dashboard you desire.
