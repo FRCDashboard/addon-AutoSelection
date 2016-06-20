@@ -1,7 +1,7 @@
 // This should be added inside the definition of the 'ui' object at the starting of ui.js.
 
     ,
-    autoSelect: document.getElementById('autoSelect')
+    autoSelect: document.getElementById('auto-select')
 
 // End section
 
@@ -9,7 +9,7 @@
 
 // Copy this portion of the code into the large switch statement in the onValueChanged function
 
-        case '/SmartDashboard/Autonomous/options': // Load list of prewritten autonomous modes
+        case '/SmartDashboard/autonomous/options': // Load list of prewritten autonomous modes
             // Clear previous list
             while (ui.autoSelect.firstChild) {
                 ui.autoSelect.removeChild(ui.autoSelect.firstChild);
@@ -23,7 +23,7 @@
             // Set value to the already-selected mode. If there is none, nothing will happen.
             ui.autoSelect.value = NetworkTables.getValue('/SmartDashboard/currentlySelectedMode');
             break;
-        case '/SmartDashboard/Autonomous/selected':
+        case '/SmartDashboard/autonomous/selected':
             ui.autoSelect.value = value;
             break;
 
@@ -35,7 +35,7 @@
 
 // Update NetworkTables when autonomous selector is changed
 ui.autoSelect.onchange = function() {
-	NetworkTables.setValue('/SmartDashboard/Autonomous Mode/selected', this.value);
+	NetworkTables.setValue('/SmartDashboard/autonomous/selected', this.value);
 };
 
 // End section
