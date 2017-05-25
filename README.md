@@ -3,5 +3,13 @@ Simple select box for choosing which autonomous to run.
 
 ## Installation
 1. Copy the contents of `autoselection.html` to wherever in the dashboard you desire.
-2. Copy the sections of `autoselection.js` to where the comments above each section say they should go.
-3. Change the names of the NetworkTables values to the values your robot code uses.
+2. Copy `autoselection.js` into the `components` directory of your FRCDashboard system.
+3. Link the script from `index.html`, for example:
+
+```js
+<script src="components/autoselection.js"></script>
+```
+
+4. If necessary, change the keys of the NetworkTables values used in `autoselection.js` to the keys your robot code uses.
+
+Alternatively, you could just copy all the code into `ui.js` or other JavaScript script, but that's a bit tougher to keep organized.
